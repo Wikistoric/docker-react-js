@@ -2,7 +2,7 @@
 
 This docker image will provide you with the ability to develop and test your application in a docker container. The way that this is implemented gives you the advantage of running multiple containers with different projects without having to always install all the libraries again.
 
-If you just want the image and not customize it or learn/play around you can also just pull the image directly from Docker Hub: `docker pull wikistoric/react-js:latest`. Then look at `start_docker.sh`to understand how to run it.
+If you just want the image and not customize it or learn/play around you can also just pull the image directly from Docker Hub: `docker pull wikistoric/react-js:latest`. Then look at [`start_docker.sh`](https://github.com/Wikistoric/docker-react-js/blob/main/start_docker.sh) to understand how to run it.
 
 Otherwise clone this repo and then:
 
