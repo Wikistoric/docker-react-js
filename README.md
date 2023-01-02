@@ -11,4 +11,6 @@ You can then run the container using `./start_docker.sh`. This will create a dir
 
 Open your browser at [localhost:8081](http://localhost:8081) to see your app. Everything that you edit will be updated immediately, but you might have to refresh the page in your browser.
 
-Of course you can change the port mapping from 8081 to something else in `start-docker.sh`. To change the name of the image itself change it in both `start-docker.sh` and `build.sh`.
+Of course you can change the port mapping from 8081 to something else in `start-docker.sh`. To change the name of the image itself change it in both `start-docker.sh` and `build.sh`. For WebSocket connections back to your app the internal and external ports have to be the same. You can do this by setting the environment variable `PORT` inside the container, e.g. by using `--env PORT=8081` (see [`start_docker.sh`](https://github.com/Wikistoric/docker-react-js/blob/main/start_docker.sh))
+
+Additional npm packages can be installed when running the container by using the environment variable `NPMINSTALL`. Set the variable to a list of package names seperated by space, e.g. `-env NPMINSTALL='react-router react-router-dom'`. It is actually the arguments that will be sent to `npm install`, so you can use the full syntax.
